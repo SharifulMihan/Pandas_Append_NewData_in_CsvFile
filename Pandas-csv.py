@@ -22,5 +22,20 @@ new_file = pd.DataFrame(new_data)
 ## Connect both old and new DataFrame with [ concat ] function
 new_file = pd.concat([file, new_file],ignore_index=True) ## ignore_index=True >> it is mandetory otherwise its start new index from new added data
 
+
 ## write it as a csv file
 new_file.to_csv("Family_Data_updated.csv",index=False)
+
+
+
+
+
+
+######################################################### Another Super method for add new row  #######################################################################
+
+file.loc(len(file)) = ['Aysha','HouseWife',15000]
+## write it as a new csv file
+file.to_csv("Family_Data_updated.csv",index=False)
+
+
+
